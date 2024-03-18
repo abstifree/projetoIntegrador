@@ -11,7 +11,6 @@ O atual projeto é uma proposta de e-commerce que realiza o comércio de produto
 
 [DER do banco de dados](https://drive.google.com/file/d/1AFl7kO1D17uP-anwnoqQmbt0omOcBM3j/view?usp=drive_link)
 
-[Documentação Task 03](https://docs.google.com/document/d/1b7n4oULjb0kUKoJY_jLpfc5lx6bj49WfVnyaxVHVx3Y/edit?usp=sharing)
 
 ## 🤖 Tecnologias Utilizadas
 Java 17, Spring Tools, MySQL, Insomnia
