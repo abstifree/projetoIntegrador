@@ -1,7 +1,7 @@
 
 # AbstiFree
 
-O atual projeto é uma proposta de e-commerce que realiza o comércio de produtos para auxiliar pessoas em dependência/abuso de substâncias alinhado com a ODS 3.5.
+O atual projeto é uma proposta de e-commerce que realiza o comércio de produtos para auxiliar pessoas em dependência/abuso de substâncias alinhado com a ODS 3.5 da ONU.
 
 
 ## Documentação
@@ -16,7 +16,7 @@ O atual projeto é uma proposta de e-commerce que realiza o comércio de produto
 ## 🤖 Tecnologias Utilizadas
 Java 17, Spring Tools, MySQL, Insomnia
 ## 👣 Próximos Passos
-Criação do model para Usuário e Produto.
+Implementar o Spring security ao projeto.
 ## ✍️ Autores
 
 - [@bruno4224onurb](https://github.com/bruno4224onurb)
