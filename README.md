@@ -15,12 +15,13 @@ O atual projeto é uma proposta de e-commerce que realiza o comércio de produto
 ## 🤖 Tecnologias Utilizadas
 Java 17, Spring Tools, MySQL, Insomnia
 ## 👣 Próximos Passos
-Implementar o Spring security ao projeto.
+Teste de Software JUnit 5, Swagger e Deploy
 ## ✍️ Autores
 
 - [@bruno4224onurb](https://github.com/bruno4224onurb)
-- [@Gstalva](https://github.com/Gstalva)
 - [@ellencaroline16](https://github.com/ellencaroline16)
+- [@giolreis](https://github.com/giolreis)
+- [@Gstalva](https://github.com/Gstalva)
 - [@LariSanches](https://github.com/LariSanches)
 - [@RodolfoOcanha](https://github.com/RodolfoOcanha)
 - [@Twayff](https://github.com/Twayff)
