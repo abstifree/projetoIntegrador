@@ -1,12 +1,20 @@
 package com.generation.abstifree.model;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity
@@ -17,61 +25,72 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotBlank(message = "O atributo nome é Obrigatório!")
-	@Size(min = 5, max = 100, message = "O atributo nome deve conter no minimo 05 e no maximo 100 caracteres")
-	private String nomeUsuario;
-	
-	@NotBlank(message = "O atributo login é Obrigatório!")
-	@Size(min = 5, max = 50, message = "O atributo login deve conter no minimo 05 e no maximo 50 caracteres")
-	private String loginUsuario;
-	
-	@NotBlank(message = "O atributo senha é Obrigatório!")
-	@Size(min = 6, max = 15, message = "O atributo login deve conter no minimo 06 e no maximo 15 caracteres")
-	private String senhaUsuario;
-	
-	@NotBlank(message = "O atributo foto é Obrigatório!")
-	@Lob
-	private byte[] fotoUsuario;
+	@NotNull(message = "O Atributo Nome é Obrigatório!")
+	private String nome;
+
+	@NotNull(message = "O Atributo Usuário é Obrigatório!")
+	@Email(message = "O Atributo Usuário deve ser um email válido!")
+	private String usuario;
+
+	@NotBlank(message = "O Atributo Senha é Obrigatório!")
+	@Size(min = 8, message = "A Senha deve ter no mínimo 8 caracteres")
+	private String senha;
+
+	@Size(max = 5000, message = "O link da foto não pode ser maior do que 5000 caracteres")
+	private String foto;
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "usuario", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties("usuario")
+	private List<Produto> produto;
+
+	/* Insira os Getters and Setters */
 
 	public Long getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getNomeUsuario() {
-		return nomeUsuario;
+	public String getNome() {
+		return this.nome;
 	}
 
-	public void setNomeUsuario(String nomeUsuario) {
-		this.nomeUsuario = nomeUsuario;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public String getLoginUsuario() {
-		return loginUsuario;
+	public String getUsuario() {
+		return this.usuario;
 	}
 
-	public void setLoginUsuario(String loginUsuario) {
-		this.loginUsuario = loginUsuario;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
-	public String getSenhaUsuario() {
-		return senhaUsuario;
+	public String getSenha() {
+		return this.senha;
 	}
 
-	public void setSenhaUsuario(String senhaUsuario) {
-		this.senhaUsuario = senhaUsuario;
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
-	public byte[] getFotoUsuario() {
-		return fotoUsuario;
+	public String getFoto() {
+		return this.foto;
 	}
 
-	public void setFotoUsuario(byte[] fotoUsuario) {
-		this.fotoUsuario = fotoUsuario;
+	public void setFoto(String foto) {
+		this.foto = foto;
 	}
-	
-	
+
+	public List<Produto> getProduto() {
+		return produto;
+	}
+
+	public void setProduto(List<Produto> produto) {
+		this.produto = produto;
+	}
+
 }
