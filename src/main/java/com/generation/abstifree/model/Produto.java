@@ -29,7 +29,7 @@ public class Produto {
 	private String nomeProduto;
 
 	@DecimalMin(value = "1.00", message = "O valor mínimo deve ser 1.00")
-	@Digits(integer = 6, fraction = 2, message = "O valor deve ter no máximo 8 dígitos inteiros e 2 decimais")
+	@Digits(integer = 6, fraction = 2, message = "O valor deve ter no máximo 6 dígitos inteiros e 2 decimais")
 	private BigDecimal valorProduto;
 
 	 @Min(value = 1, message = "A quantidade deve ser maior que zero")
